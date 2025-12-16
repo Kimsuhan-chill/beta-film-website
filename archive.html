@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Archive | Film Archive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 공통 폰트 -->
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <!-- 공통 + 아카이브 전용 CSS -->
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/archive.css">
+</head>
+<body>
+  <!-- 공통 헤더 -->
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html">FILM ARCHIVE</a>
+    </div>
+    <nav class="main-nav">
+      <a href="archive.html">Archive</a>
+      <a href="artists.html">Artists</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 상단 페이지 헤더 -->
+    <section class="page-header">
+      <h1>Archive</h1>
+      <p class="page-description">
+        필름 작가들의 일상, 여행 이야기를 사진을 통해 들어봐요. 
+      </p>
+    </section>
+
+    <!-- 필터 영역 -->
+    <section class="archive-filters">
+      <!-- 좌측: 테마 필터 -->
+      <div class="filter-group">
+        <div class="filter-label">Theme</div>
+        <div class="filter-chips">
+          <button class="chip is-active" data-theme="all">All</button>
+          <button class="chip" data-theme="travel">Travel</button>
+          <button class="chip" data-theme="running">Running</button>
+          <button class="chip" data-theme="daily">Daily</button>
+          <button class="chip" data-theme="study">Study</button>
+        </div>
+      </div>
+
+      <!-- 우측: 작가 / 검색 -->
+      <div class="filter-group filter-group-right">
+        <div class="filter-control">
+          <label for="artistFilter">Artist</label>
+          <select id="artistFilter" class="select-dark">
+            <option value="all">All</option>
+            <option value="suhan">suhan</option>
+            <option value="jongy">jongy</option>
+            <option value="artist03">Artist 03</option>
+          </select>
+        </div>
+
+        <div class="filter-control">
+          <label for="tagSearch">Tag / Keyword</label>
+          <input
+            type="text"
+            id="tagSearch"
+            class="input-dark"
+            placeholder="search by #rest, #sea"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- 아카이브 그리드 -->
+    <section class="archive-grid-section">
+      <div class="section-heading-row">
+        <h2>All Works</h2>
+        <!-- JS에서 실제 개수로 덮어쓸 예정 -->
+        <span class="archive-count-text">총 4 작품</span>
+      </div>
+
+      <div class="archive-grid">
+        <!-- 개별 작품 카드 예시들 -->
+        <article class="archive-item"
+                 data-theme="Travel"
+                 data-artist="Suhan"
+                 data-tags="Mukho beach">
+          <div class="archive-thumb">
+            <img src="assets/img/suhan/suhan-traverl-mukho-02.JPG" alt="Mukho Beach">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">Mukho Beach</h3>
+            <p class="archive-sub">
+              suhan · mukho · 2024 · autoboy
+            </p>
+            <p class="archive-tags">#sea #rest #peace</p>
+          </div>
+        </article>
+
+        <article class="archive-item"
+                 data-theme="daily"
+                 data-artist="suhan"
+                 data-tags="Goodbye! jongy">
+          <div class="archive-thumb">
+            <img src="assets/img/suhan/suhan-dayily-workplace.jpg" alt="Goodbye! jongy">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">Goodbye! jongy</h3>
+            <p class="archive-sub">
+              suhan · Gaepo · 2025 · autoboy
+            </p>
+            <p class="archive-tags">#Last #Workplace #midnight</p>
+          </div>
+        </article>
+
+        <article class="archive-item"
+                 data-theme="travel"
+                 data-artist="suhan"
+                 data-tags="Travel with friend">
+          <div class="archive-thumb">
+            <img src="assets/img/suhan/suhan-travel-jeju-01.JPG" alt="Travel with friend">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">Travel with friend</h3>
+            <p class="archive-sub">
+              suhan · jeju · 2023 · autoboy
+            </p>
+            <p class="archive-tags">#jeju #friend #nature</p>
+          </div>
+        </article>
+
+        <article class="archive-item"
+                 data-theme="travel"
+                 data-artist="suhan"
+                 data-tags="sunset, love, park">
+          <div class="archive-thumb">
+            <img src="assets/img/suhan/suhan-travel-tokyo-01.JPG" alt="sunset, love, park">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">sunset, love, park</h3>
+            <p class="archive-sub">
+              suhan · tokyo · 2025 · autoboy
+            </p>
+            <p class="archive-tags">#sunset #Love #Chill</p>
+          </div>
+        </article>
+
+         <article class="archive-item"
+                 data-theme="travel"
+                 data-artist="jongy"
+                 data-tags="sunset, love, park">
+          <div class="archive-thumb">
+            <img src="assets/img/jongy/jongy-travel-01.jpg" alt="sunset, love, park">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">sunset, love, park</h3>
+            <p class="archive-sub">
+              jongy · tokyo · 2025 · RICO GR3
+            </p>
+            <p class="archive-tags">#sunset #Love #Chill</p>
+          </div>
+        </article>
+
+        <article class="archive-item"
+                 data-theme="travel"
+                 data-artist="jongy"
+                 data-tags="sunset, love, park">
+          <div class="archive-thumb">
+            <img src="assets/img/jongy/jongy-travel-02.jpg" alt="sunset, love, park">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">sunset, love, park</h3>
+            <p class="archive-sub">
+              jongy · tokyo · 2025 · RICO GR3
+            </p>
+            <p class="archive-tags">#sunset #Love #Chill</p>
+          </div>
+        </article>
+
+        <article class="archive-item"
+                 data-theme="travel"
+                 data-artist="jongy"
+                 data-tags="sunset, love, park">
+          <div class="archive-thumb">
+            <img src="assets/img/jongy/jongy-travel-04.jpg" alt="sunset, love, park">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">sunset, love, park</h3>
+            <p class="archive-sub">
+              jongy · tokyo · 2025 · RICO GR3
+            </p>
+            <p class="archive-tags">#sunset #Love #Chill</p>
+          </div>
+        </article>
+
+        <article class="archive-item"
+                 data-theme="travel"
+                 data-artist="jongy"
+                 data-tags="sunset, love, park">
+          <div class="archive-thumb">
+            <img src="assets/img/jongy/jongy-daily-01.jpg" alt="sunset, love, park">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">sunset, love, park</h3>
+            <p class="archive-sub">
+              jongy · tokyo · 2025 · RICO GR3
+            </p>
+            <p class="archive-tags">#sunset #Love #Chill</p>
+          </div>
+        </article>
+
+        <article class="archive-item"
+                 data-theme="travel"
+                 data-artist="jongy"
+                 data-tags="sunset, love, park">
+          <div class="archive-thumb">
+            <img src="assets/img/jongy/jongy-daily-02.jpg" alt="sunset, love, park">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">sunset, love, park</h3>
+            <p class="archive-sub">
+              jongy · tokyo · 2025 · RICO GR3
+            </p>
+            <p class="archive-tags">#sunset #Love #Chill</p>
+          </div>
+        </article>
+
+        <article class="archive-item"
+                 data-theme="travel"
+                 data-artist="jongy"
+                 data-tags="sunset, love, park">
+          <div class="archive-thumb">
+            <img src="assets/img/jongy/jongy-travel-03.jpg" alt="sunset, love, park">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">sunset, love, park</h3>
+            <p class="archive-sub">
+              jongy · tokyo · 2025 · RICO GR3
+            </p>
+            <p class="archive-tags">#sunset #Love #Chill</p>
+          </div>
+        </article>
+
+        <article class="archive-item"
+                 data-theme="travel"
+                 data-artist="jongy"
+                 data-tags="sunset, love, park">
+          <div class="archive-thumb">
+            <img src="assets/img/jongy/jongy-daily-03.jpg" alt="sunset, love, park">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">sunset, love, park</h3>
+            <p class="archive-sub">
+              jongy · tokyo · 2025 · RICO GR3
+            </p>
+            <p class="archive-tags">#sunset #Love #Chill</p>
+          </div>
+        </article>
+
+        <article class="archive-item"
+                 data-theme="travel"
+                 data-artist="jongy"
+                 data-tags="sunset, love, park">
+          <div class="archive-thumb">
+            <img src="assets/img/jongy/jongy-work-01.jpg" alt="sunset, love, park">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">sunset, love, park</h3>
+            <p class="archive-sub">
+              jongy · tokyo · 2025 · RICO GR3
+            </p>
+            <p class="archive-tags">#sunset #Love #Chill</p>
+          </div>
+        </article>
+
+        <article class="archive-item"
+                 data-theme="travel"
+                 data-artist="jongy"
+                 data-tags="sunset, love, park">
+          <div class="archive-thumb">
+            <img src="assets/img/jongy/jongy-work-02.jpg" alt="sunset, love, park">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">sunset, love, park</h3>
+            <p class="archive-sub">
+              jongy · tokyo · 2025 · RICO GR3
+            </p>
+            <p class="archive-tags">#sunset #Love #Chill</p>
+          </div>
+        </article>
+
+        <article class="archive-item"
+                 data-theme="travel"
+                 data-artist="jongy"
+                 data-tags="sunset, love, park">
+          <div class="archive-thumb">
+            <img src="assets/img/jongy/jongy-work-03.jpg" alt="sunset, love, park">
+          </div>
+          <div class="archive-meta">
+            <h3 class="archive-title">sunset, love, park</h3>
+            <p class="archive-sub">
+              jongy · tokyo · 2025 · RICO GR3
+            </p>
+            <p class="archive-tags">#sunset #Love #Chill</p>
+          </div>
+        </article>
+
+        
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Film Archive & Artists. All rights reserved.</p>
+  </footer>
+
+  <!-- JS 파일 연결 -->
+  <script src="js/main.js"></script>
+</body>
+</html>

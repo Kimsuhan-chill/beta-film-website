@@ -1,0 +1,203 @@
+/* --------------------------------
+   INDEX (HOME) PAGE
+----------------------------------- */
+
+/* Hero */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 40px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  align-items: center;
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+}
+
+.hero-text p {
+  font-size: 0.98rem;
+  max-width: 480px;
+  margin-bottom: 24px;
+  color: #C6BFAF;
+}
+
+.btn-primary {
+  background: #AE8B63;
+  color: #121212;
+  border: 1px solid #AE8B63;
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: #F3EEE0;
+  border-color: #F3EEE0;
+}
+
+.hero-image {
+  justify-self: center;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+  filter: contrast(1.05) saturate(0.9);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75);
+}
+
+/* 카테고리 */
+.categories {
+  padding-top: 16px;
+  padding-bottom: 40px;
+}
+
+.categories h2 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.category-card {
+  background: #1C1C1C;
+  border-radius: 14px;
+  padding: 14px 12px;
+  border: 1px solid #2A2A2A;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.65);
+  text-decoration: none;
+  color: #E2DCCF;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.category-card h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.category-card p {
+  font-size: 0.82rem;
+  margin: 0;
+  color: #B1A896;
+}
+
+.category-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.8);
+  background: #202020;
+  border-color: #AE8B63;
+}
+
+/* 최근 업로드 */
+.latest-works {
+  padding-top: 10px;
+  padding-bottom: 60px;
+}
+
+.latest-works h2 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.work-card {
+  background: #1C1C1C;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #2A2A2A;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+}
+
+.work-card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  filter: saturate(0.95) contrast(1.06);
+}
+
+.work-meta {
+  padding: 12px 12px 14px;
+}
+
+.work-meta h3 {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.work-artist {
+  font-size: 0.8rem;
+  color: #B3A38E;
+  margin: 0 0 4px;
+}
+
+.work-tags {
+  font-size: 0.78rem;
+  color: #AE8B63;
+  margin: 0;
+}
+
+.section-action {
+  margin-top: 18px;
+  text-align: right;
+}
+
+.btn-secondary {
+  border: 1px solid #AE8B63;
+  color: #AE8B63;
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  background: #AE8B63;
+  color: #121212;
+}
+
+/* INDEX 반응형 */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 40px;
+  }
+
+  .hero-image {
+    order: -1;
+    margin-bottom: 16px;
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .work-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .category-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 1.9rem;
+  }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Film Archive & Artists</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  
+  
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/index.css">
+  
+</head>
+<body>
+  <!-- 상단 내비게이션 -->
+  <header class="site-header">
+    <div class="logo">
+      <a href="index.html">FILM ARCHIVE</a>
+    </div>
+    <nav class="main-nav">
+      <a href="archive.html">Archive</a>
+      <a href="artists.html">Artists</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <!-- 메인 히어로 섹션 -->
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h1>필름으로 남긴 시간의 기록</h1>
+        <p>필름 작가들의 일상과 여행기록이 담겨있는 아카이브.</p>
+        <a href="archive.html" class="btn-primary">아카이브 보러 가기</a>
+      </div>
+      <div class="hero-image">
+        <img src="assets/img/hero.jpg" alt="필름 사진 콜라주">
+      </div>
+    </section>
+
+    <!-- 테마별 바로가기 -->
+    <section class="categories">
+      <h2>테마별 아카이브</h2>
+      <div class="category-grid">
+        <a href="archive.html?theme=travel" class="category-card">
+          <h3>여행</h3>
+          <p>도시부터 바다까지, 여행지의 공기.</p>
+        </a>
+        <a href="archive.html?theme=running" class="category-card">
+          <h3>러닝</h3>
+          <p>온전한 '내'가 될 수 있는 시간.</p>
+        </a>
+        <a href="archive.html?theme=daily" class="category-card">
+          <h3>일상</h3>
+          <p>스쳐 지나가는 하루의 조각.</p>
+        </a>
+        <a href="archive.html?theme=study" class="category-card">
+          <h3>공부</h3>
+          <p>더 나은 나를 만들기 위한 제련의 과정.</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- 최신 업로드 -->
+    <section class="latest-works">
+      <h2>최근 업로드</h2>
+      <div class="work-grid">
+        <!-- 반복되는 카드 예시 -->
+        <article class="work-card">
+          <img src="assets/img/suhan/suhan-daily-skypark.JPG" alt="방황하는 청년들">
+          <div class="work-meta">
+            <h3>지금 이 순간 우리는 어디로 가고 있는가.</h3>
+            <p class="work-artist">by jongy</p>
+            <p class="work-tags">#방황 #청춘 #필름</p>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <img src="assets/img/suhan/suhan-daily-airforce-01.JPG" alt="가장 높은 힘">
+          <div class="work-meta">
+            <h3>군사경찰들의 외출</h3>
+            <p class="work-artist">by suhan</p>
+            <p class="work-tags">#복무 #청주 #막내</p>
+          </div>
+        </article>
+
+        <article class ="work-card">
+          <img src = "assets/img/suhan/suhan-travel-jeju-01.JPG" alt ="친구들"
+          <div class="work-meta">
+            <h3>제주도 어서옵소예</h3>
+            <p class ="work-artist">by suhan</p>
+            <p class ="work-tags">#제주 #여행 #동창</p>
+          </div>
+        </article>
+
+        <!-- 필요 시 더 추가 -->
+      </div>
+      <div class="section-action">
+        <a href="archive.html" class="btn-secondary">전체 아카이브 보기</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer class="site-footer">
+    <p>© 2025 Film Archive & Artists. All rights reserved.</p>
+  </footer>
+</body>
+</html>
