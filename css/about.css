@@ -1,0 +1,174 @@
+/* --------------------------------
+   ABOUT PAGE
+----------------------------------- */
+
+.about-header {
+  padding-top: 48px;
+  padding-bottom: 20px;
+}
+
+.about-intro {
+  padding-top: 12px;
+  padding-bottom: 40px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) 260px;
+  gap: 28px;
+}
+
+.about-intro-main h2 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.about-intro-main p {
+  font-size: 0.95rem;
+  color: #D7D0C2;
+}
+
+.about-intro-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-info-block {
+  background: #1C1C1C;
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid #2A2A2A;
+}
+
+.about-info-block h3 {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.about-info-block ul {
+  font-size: 0.85rem;
+  color: #CFC7B8;
+}
+
+.about-info-block li + li {
+  margin-top: 2px;
+}
+
+.about-grid-section {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.about-card {
+  background: #1C1C1C;
+  border-radius: 16px;
+  padding: 14px 14px 16px;
+  border: 1px solid #2A2A2A;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.85);
+}
+
+.about-card h3 {
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+.about-card p {
+  font-size: 0.9rem;
+  color: #D7D0C2;
+}
+
+.about-team {
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.about-team-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.about-team-card {
+  background: #1C1C1C;
+  border-radius: 16px;
+  padding: 14px 14px 16px;
+  border: 1px solid #2A2A2A;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.85);
+}
+
+.about-team-card h3 {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.about-team-card .role {
+  font-size: 0.8rem;
+  color: #AE8B63;
+  margin-bottom: 6px;
+}
+
+.about-team-card p {
+  font-size: 0.9rem;
+  color: #D7D0C2;
+}
+
+.about-contact {
+  padding-top: 10px;
+  padding-bottom: 60px;
+  border-top: 1px solid #232323;
+}
+
+.about-contact-inner {
+  max-width: 640px;
+}
+
+.about-contact-inner h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.about-contact-inner p {
+  font-size: 0.95rem;
+  color: #D7D0C2;
+}
+
+.about-contact-list {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #CFC7B8;
+}
+
+.about-contact-list li + li {
+  margin-top: 4px;
+}
+
+.about-contact-list span {
+  display: inline-block;
+  min-width: 70px;
+  color: #AFA594;
+}
+
+/* ABOUT 반응형 */
+@media (max-width: 900px) {
+  .about-intro {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid,
+  .about-team-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .about-grid,
+  .about-team-grid {
+    grid-template-columns: 1fr;
+  }
+}

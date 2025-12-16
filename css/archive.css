@@ -1,0 +1,136 @@
+/* --------------------------------
+   ARCHIVE PAGE
+----------------------------------- */
+
+.archive-filters {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #232323;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group-right {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.filter-label {
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8F8778;
+}
+
+.filter-control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-control label {
+  font-size: 0.78rem;
+  color: #AFA594;
+}
+
+.archive-grid-section {
+  padding-top: 24px;
+  padding-bottom: 60px;
+}
+
+.archive-count-text {
+  font-size: 0.8rem;
+  color: #8F8778;
+}
+
+.archive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.archive-item {
+  background: #1C1C1C;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #2A2A2A;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+
+.archive-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.9);
+  border-color: #AE8B63;
+}
+
+.archive-thumb img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: saturate(0.95) contrast(1.06);
+}
+
+.archive-meta {
+  padding: 10px 10px 12px;
+}
+
+.archive-title {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.archive-sub {
+  font-size: 0.8rem;
+  color: #B3A38E;
+  margin-bottom: 4px;
+}
+
+.archive-tags {
+  font-size: 0.78rem;
+  color: #AE8B63;
+  margin: 0;
+}
+
+/* ARCHIVE 반응형 */
+@media (max-width: 900px) {
+  .archive-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .archive-filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-group-right {
+    justify-content: flex-start;
+  }
+
+  .archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 500px) {
+  .archive-grid {
+    grid-template-columns: 1fr;
+  }
+}

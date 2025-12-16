@@ -1,0 +1,284 @@
+/* --------------------------------
+   ARTIST DETAIL PAGE
+----------------------------------- */
+
+.artist-hero {
+  padding-top: 48px;
+  padding-bottom: 32px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: center;
+}
+
+.artist-hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.artist-hero-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.back-link {
+  font-size: 0.8rem;
+  color: #C6BFAF;
+  opacity: 0.9;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 1px;
+  transition: opacity 0.15s ease, border-color 0.15s ease;
+}
+
+.back-link:hover {
+  opacity: 1;
+  border-color: #AE8B63;
+}
+
+.artist-badge {
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #2A2A2A;
+  background: #1C1C1C;
+  color: #CFC7B8;
+}
+
+.artist-hero-name {
+  font-size: 2.1rem;
+}
+
+.artist-hero-tagline {
+  font-size: 0.95rem;
+  color: #C6BFAF;
+}
+
+.artist-hero-meta {
+  margin: 4px 0 4px;
+  font-size: 0.85rem;
+  color: #D7D0C2;
+}
+
+.artist-hero-meta li + li {
+  margin-top: 2px;
+}
+
+.artist-hero-meta span {
+  display: inline-block;
+  min-width: 60px;
+  color: #AFA594;
+}
+
+.artist-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pill {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid #2A2A2A;
+  background: #1C1C1C;
+  color: #AE8B63;
+}
+
+.artist-hero-photo img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+  filter: saturate(0.95) contrast(1.05);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.85);
+}
+
+.artist-summary {
+  padding-top: 8px;
+  padding-bottom: 36px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) 260px;
+  gap: 28px;
+}
+
+.artist-bio h2 {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.artist-bio p {
+  font-size: 0.95rem;
+  color: #D7D0C2;
+}
+
+.artist-side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.artist-info-block {
+  background: #1C1C1C;
+  border-radius: 14px;
+  padding: 12px 14px;
+  border: 1px solid #2A2A2A;
+}
+
+.artist-info-block h3 {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.artist-info-block ul {
+  font-size: 0.85rem;
+  color: #CFC7B8;
+}
+
+.artist-info-block li + li {
+  margin-top: 2px;
+}
+
+.artist-works {
+  padding-top: 12px;
+  padding-bottom: 52px;
+}
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.work-thumb {
+  background: #1C1C1C;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #2A2A2A;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.85);
+  display: flex;
+  flex-direction: column;
+}
+
+.work-thumb-image img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  filter: saturate(0.95) contrast(1.05);
+}
+
+.work-thumb-meta {
+  padding: 10px 10px 12px;
+}
+
+.work-thumb-meta h3 {
+  font-size: 0.9rem;
+  margin-bottom: 4px;
+}
+
+.work-caption {
+  font-size: 0.8rem;
+  color: #B3A38E;
+  margin-bottom: 4px;
+}
+
+.work-tags {
+  font-size: 0.78rem;
+  color: #AE8B63;
+  margin: 0;
+}
+
+.artist-timeline {
+  padding-top: 8px;
+  padding-bottom: 60px;
+  border-top: 1px solid #232323;
+}
+
+.artist-timeline h2 {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.timeline-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.9rem;
+}
+
+.timeline-list li {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.timeline-list .year {
+  color: #AE8B63;
+  font-family: "League Spartan", system-ui, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.12em;
+}
+
+.timeline-content strong {
+  display: block;
+  margin-bottom: 2px;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #CFC7B8;
+}
+
+/* ARTIST DETAIL 반응형 */
+@media (max-width: 900px) {
+  .artist-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-hero-photo {
+    max-width: 360px;
+  }
+
+  .artist-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .works-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .timeline-list li {
+    grid-template-columns: 60px minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .artist-hero {
+    padding-top: 32px;
+  }
+
+  .artist-hero-name {
+    font-size: 1.8rem;
+  }
+
+  .artist-hero-badge-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-list li {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-list .year {
+    margin-bottom: 2px;
+  }
+}
