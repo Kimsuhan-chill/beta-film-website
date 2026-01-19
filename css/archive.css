@@ -134,3 +134,132 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================
+   Archive Lightbox (Album)
+========================= */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 999;
+}
+.lightbox.is-open { display: block; }
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+}
+
+.lightbox-panel {
+  position: relative;
+  width: min(1100px, calc(100vw - 32px));
+  height: min(80vh, 760px);
+  margin: 10vh auto 0;
+  border: 1px solid #2A2A2A;
+  background: #121212;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 18px 60px rgba(0,0,0,0.55);
+}
+
+.lightbox-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 100%;
+}
+
+.lightbox-media {
+  position: relative;
+  margin: 0;
+  height: 100%;
+  background: #0E0E0E;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lightbox-media img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* 앨범 네비 버튼 */
+.lb-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid #2A2A2A;
+  background: rgba(18,18,18,0.7);
+  color: #F3EEE0;
+  font-size: 26px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  transition: all 0.15s ease;
+}
+.lb-nav:hover { border-color: #AE8B63; }
+.lb-prev { left: 14px; }
+.lb-next { right: 14px; }
+
+.lb-counter {
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid #2A2A2A;
+  background: rgba(18,18,18,0.7);
+  font-size: 0.8rem;
+  color: #CFC7B8;
+}
+
+.lightbox-info {
+  height: 100%;
+  padding: 18px;
+  background: #121212;
+  border-left: 1px solid #232323;
+  overflow: auto;
+}
+
+.lightbox-info-box {
+  border: 1px solid #2A2A2A;
+  border-radius: 16px;
+  background: #1C1C1C;
+  padding: 16px;
+}
+
+.lightbox-title {
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #F3EEE0;
+  font-family: "League Spartan", system-ui, sans-serif;
+}
+
+.lightbox-meta { margin: 0 0 8px; font-size: 0.9rem; color: #C6BFAF; }
+.lightbox-tags { margin: 0 0 14px; font-size: 0.85rem; color: #AE8B63; }
+
+.lightbox-note { border-top: 1px solid #2A2A2A; padding-top: 14px; }
+.lightbox-note-label {
+  font-size: 0.75rem;
+  color: #8F8778;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.lightbox-desc { margin: 0; font-size: 0.9rem; color: #E2DCCF; line-height: 1.7; }
+
+@media (max-width: 860px) {
+  .lightbox-panel { height: min(86vh, 900px); margin-top: 7vh; }
+  .lightbox-grid { grid-template-columns: 1fr; grid-template-rows: 1.2fr 1fr; }
+  .lightbox-info { border-left: none; border-top: 1px solid #232323; }
+}
+
